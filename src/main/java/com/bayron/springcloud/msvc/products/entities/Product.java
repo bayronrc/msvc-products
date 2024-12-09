@@ -1,5 +1,6 @@
 package com.bayron.springcloud.msvc.products.entities;
 
+import java.time.LocalDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,8 +28,11 @@ public class Product {
 
     @Column(length = 100)
     private Double price;
-    
+
     @Lob
     private String description;
+
+    @Column(name = "created_at")
+    private LocalDate createdAt;
 
 }
