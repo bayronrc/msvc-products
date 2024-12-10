@@ -1,5 +1,10 @@
 package com.bayron.springcloud.msvc.products.entities;
 
+import java.time.LocalDate;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,5 +35,9 @@ public class Product {
     
     @Lob
     private String description;
+
+    @Column(name = "create_at")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDate createAt;
 
 }
