@@ -1,10 +1,10 @@
 package com.bayron.springcloud.msvc.products.repositories;
 
+import com.bayron.springcloud.msvc.products.entities.Product;
 import org.springframework.data.repository.CrudRepository;
 
-import com.bayron.springcloud.msvc.products.entities.Product;
-
-
 public interface ProductRepository extends CrudRepository<Product, Long> {
+
+    
 
 }
