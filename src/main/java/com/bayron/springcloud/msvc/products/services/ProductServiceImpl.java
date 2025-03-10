@@ -21,12 +21,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional(readOnly = true)
     public List<Product> findAll() {
-        return List.of();
+        return (List<Product>) repository.findAll();
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public Optional<Product> findById(Long id) {
-        return Optional.empty();
+        return repository.findById(id);
     }
 }
